@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff7eb3,#ff758c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:white;
+}
+
+.container{
+    padding:20px;
+}
+
+h1{
+    font-size:2rem;
+}
+
+.gift{
+    font-size:80px;
+    cursor:pointer;
+    transition: transform .3s;
+}
+
+.gift:hover{
+    transform:scale(1.2);
+}
+
+.message{
+    display:none;
+    margin-top:20px;
+    font-size:1.3rem;
+    background:rgba(255,255,255,0.2);
+    padding:15px;
+    border-radius:12px;
+}
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎂 Tap the Gift 🎁</h1>
+
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <div class="message" id="msg">
+        <h2>Happy Birthday My Love ❤️</h2>
+        <p>
+            Tum meri life ka sabse beautiful part ho.<br>
+            May your day be full of happiness, smiles,
+            and everything you love 💖
+        </p>
+        <p>— From Someone Who Loves You 🌙</p>
+    </div>
+</div>
+
+<script>
+function openGift(){
+
+    document.getElementById("msg").style.display="block";
+
+    // Confetti Animation
+    confetti({
+        particleCount:150,
+        spread:90,
+        origin:{y:0.6}
+    });
+}
+</script>
+
+</body>
+</html>
